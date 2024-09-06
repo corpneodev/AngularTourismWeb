@@ -1,0 +1,44 @@
+/* Container styling */
+.center-container {
+    background-color: rgb(246, 214, 156); /* Match with navbar background */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+.form-label {
+    color: black;
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid rgb(255, 213, 128); /* Match with navbar hover background */
+}
+
+/* Button styling */
+.btn-danger {
+    background-color:rgb(236, 167, 30);
+    border-color: rgb(236, 167, 30);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: orangered;
+    border-color: orangered;
+}
+
+/* Link styling */
+a {
+    color: orangered;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c9302c;
+    text-decoration: underline;
+}

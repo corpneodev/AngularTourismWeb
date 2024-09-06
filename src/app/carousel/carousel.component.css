@@ -1,0 +1,15 @@
+.carousel-inner {
+  width: 80%; /* Set the width of the carousel to 80% */
+  margin: 0 auto; /* Center the carousel with equal margins on both sides */
+}
+
+.carousel-inner img {
+  height: 500px; /* Set a fixed height for the images (optional) */
+  object-fit: cover; /* Ensure the image covers the entire container without stretching */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.background {
+background-color: rgb(252, 221, 159) ;
+}
+

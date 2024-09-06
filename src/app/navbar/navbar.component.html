@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MahaDarshan</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="'home'" [routerLinkActive]="'active'">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'tours'" [routerLinkActive]="'active'">Tours</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'gallery'" [routerLinkActive]="'active'">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'bookings'" [routerLinkActive]="'active'">Bookings</a>
+        </li>
+               <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/add']" [routerLinkActive]="'active'">Add New Tour</a>
+
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" [routerLink]="'login'" (click)="login()">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" (click)="login()">Logout</a>
+        </li>
+      </ul>
+      <!-- Uncomment or remove if needed -->
+      <!--
+      <label>
+        <input
+          type="radio"
+          name="options"
+          value="Option1"
+          (change)="onOptionChange('Option1')"
+        />
+        Option 1
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="options"
+          value="Option2"
+          (change)="onOptionChange('Option2')"
+        />
+        Option 2
+      </label>
+      -->
+    <form class="d-flex">
+  <input
+    placeholder="Search"
+    #searchInput
+    name="first"
+  />
+  <button class="btn btn-outline-success" type="button" (click)="searchItemfunction($event)">Search</button>
+</form>
+
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,101 @@
+<article class="d-flex justify-content-center">
+  <div class="w-50 border border-4 p-4">
+    <h3 class="text-center">Tour Form</h3>
+    <form [formGroup]="tourForm" (submit)="submitTour()" class="p-2">
+          <div class="mb-3">
+        <label for="tourId" class="form-label">Tour Id</label>
+        <input
+          type="text"
+          class="form-control"
+          id="id"
+          formControlName="id"
+        />
+        <div class="text-danger text-bold" *ngIf="id?.touched">
+          <span *ngIf="id?.hasError('required')">Title is required</span>
+          <span *ngIf="id?.hasError('minlength')"
+            >Id must have at least 2 characters</span
+          >
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="tourTitle" class="form-label">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="tourTitle"
+          formControlName="title"
+        />
+        <div class="text-danger text-bold" *ngIf="title?.touched">
+          <span *ngIf="title?.hasError('required')">Title is required</span>
+          <span *ngIf="title?.hasError('minlength')"
+            >Title must have at least 2 characters</span
+          >
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="availableSeats" class="form-label">Available Seats</label>
+        <input
+          type="number"
+          class="form-control"
+          id="availableSeats"
+          formControlName="available_seats"
+        />
+        <div class="text-danger text-bold" *ngIf="availableSeats?.touched">
+          <span *ngIf="availableSeats?.hasError('required')"
+            >Available Seats are required</span
+          >
+          <span *ngIf="availableSeats?.hasError('min')"
+            >Please enter a valid number of seats</span
+          >
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          formControlName="price"
+        />
+        <div class="text-danger text-bold" *ngIf="price?.touched">
+          <span *ngIf="price?.hasError('required')">Price is required</span>
+          <span *ngIf="price?.hasError('min')">Please enter a valid price</span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="discountedPrice" class="form-label">Discounted Price</label>
+        <input
+          type="number"
+          class="form-control"
+          id="discountedPrice"
+          formControlName="discounted_price"
+        />
+        <div class="text-danger text-bold" *ngIf="discountedPrice?.touched">
+          <span *ngIf="discountedPrice?.hasError('required')"
+            >Discounted Price is required</span
+          >
+          <span *ngIf="discountedPrice?.hasError('min')"
+            >Please enter a valid discounted price</span
+          >
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="imageUrl" class="form-label">Upload Image</label>
+        <input type="file" class="form-control" id="imageFile" />
+        <!-- formControlName="image_url" -->
+        <!-- <div class="text-danger text-bold" *ngIf="imageUrl?.touched">
+          <span *ngIf="imageUrl?.hasError('required')">Image URL is required</span>
+          <span *ngIf="imageUrl?.hasError('pattern')">Please enter a valid URL</span>
+        </div> -->
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary m-2"
+        [disabled]="tourForm.invalid"
+      >
+        SUBMIT
+      </button>
+      <button type="reset" class="btn btn-primary">RESET</button>
+    </form>
+  </div>
+</article>

@@ -1,0 +1,26 @@
+.navbar{
+    background-color: rgb(246, 214, 156);
+}
+.navbar-brand{
+    color: orangered;
+    font-weight: bolder;
+    font-size: 28px;    
+}
+/* Apply hover effect to nav-items */
+.navbar-nav .nav-item:hover {
+  background-color: rgb(255, 213, 128); /* Change background color on hover */
+  border-radius: 0.25rem; /* Optional: Add rounded corners */
+}
+
+/* Apply hover effect to links inside nav-items */
+.navbar-nav .nav-item:hover .nav-link {
+  color:orangered; /* Change text color on hover */
+  font-weight: bold; /* Make text bold on hover */
+}
+
+.active {
+  background-color: #FF9900;
+  color: #FFFFFF !important;
+  font-weight: bold;
+  border-radius: 0.25rem;
+}

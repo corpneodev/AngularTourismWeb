@@ -1,0 +1,8 @@
+.btn{
+    background-color:rgb(255, 213, 128);
+}
+.btn:hover{
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+}

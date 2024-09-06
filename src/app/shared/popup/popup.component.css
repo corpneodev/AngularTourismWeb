@@ -1,0 +1,58 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(246, 214, 156); /* Same background color as navbar */
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 300px;
+  max-width: 90%;
+  border-radius: 0.25rem; /* Optional: Add rounded corners */
+  text-align: center; /* Center text content */
+}
+
+.modal-content h2 {
+  color: orangered; /* Same color as navbar brand */
+  font-weight: bolder; /* Same font weight as navbar brand */
+  font-size: 24px; /* Slightly smaller than navbar brand font size */
+}
+
+.modal-content p {
+  color: #333; /* Neutral color for body text */
+  font-size: 16px; /* Set a readable font size */
+}
+
+button.btn {
+  background-color: rgb(255, 213, 128); /* Same hover background color as nav-items */
+  color: orangered; /* Same hover text color as nav-links */
+  font-weight: bold;
+  border-radius: 0.25rem; /* Same border-radius as active nav-item */
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.btn-danger {
+    background-color:rgb(236, 167, 30);
+    border-color: rgb(236, 167, 30);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: orangered;
+    border-color: orangered;
+    color: white;
+}
